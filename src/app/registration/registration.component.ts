@@ -37,6 +37,7 @@ export class RegistrationComponent implements OnInit {
       });
 
   }
+  
 
   public registerNow() {
     console.log(this.login);
@@ -45,7 +46,6 @@ export class RegistrationComponent implements OnInit {
     this.user.username= this.login;
     this.user.dateevaluation = '2020-05-02';
     console.log(this.user);
-    const resp = this.service.doRegistration(this.user);
-    resp.subscribe((data) => this.user = data);
+   this.service.doRegistration(this.user).subscribe((data) => this.user = data);
   }
 }
