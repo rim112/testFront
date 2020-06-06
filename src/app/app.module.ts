@@ -59,9 +59,10 @@ import { BoAccueilComponent } from './bo-accueil/bo-accueil.component';
 import { BoCreatVoyageComponent } from './bo-creat-voyage/bo-creat-voyage.component';
 import { BoListVoyagesComponent } from './bo-list-voyages/bo-list-voyages.component';
 import { BoUpdateVoyageComponent } from './bo-update-voyage/bo-update-voyage.component';
+import { SearchDeleteComponent } from './search-delete/search-delete.component';
 @NgModule({
   declarations: [
-    AppComponent, EnregistrerParticipationComponent, VoyageListComponent, AuthentificationComponent, AccueilComponent, PaiementComponent, AdminParticipationComponent, NewTasksComponent, RegiterationComponent, TasksComponent, UserComponent, RegisterationComponent, Accueil2Component, FavorisComponent, HospitaliteComponent, GuideVoyageurComponent, BoAccueilComponent, BoCreatVoyageComponent, BoListVoyagesComponent, BoUpdateVoyageComponent
+    AppComponent, EnregistrerParticipationComponent, VoyageListComponent, AuthentificationComponent, AccueilComponent, PaiementComponent, AdminParticipationComponent, NewTasksComponent, RegiterationComponent, TasksComponent, UserComponent, RegisterationComponent, Accueil2Component, FavorisComponent, HospitaliteComponent, GuideVoyageurComponent, BoAccueilComponent, BoCreatVoyageComponent, BoListVoyagesComponent, BoUpdateVoyageComponent, SearchDeleteComponent
   ],
   imports: [
     BrowserModule, FormsModule, ReactiveFormsModule, NgxPayPalModule, HttpClientModule, AppRoutingModule, BrowserAnimationsModule, //<<<< and here

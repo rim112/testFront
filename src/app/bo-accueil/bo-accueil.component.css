@@ -25,13 +25,7 @@ li i
   background-color: limegreen;
   font-size: 15px;
 }
-html,body{
-  background: url(bakk.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 0;
-  padding: 0;
-}
+
 .panel-body {
   background: #303030;
 }
