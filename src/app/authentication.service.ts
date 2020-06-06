@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { User } from './user/user.module';
+import { User } from 'src/app/user';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { JwtHelper } from 'angular2-jwt';
 
