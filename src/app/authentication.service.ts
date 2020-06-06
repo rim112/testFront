@@ -8,7 +8,7 @@ import { JwtHelper } from 'angular2-jwt';
   providedIn: 'root'
 })
 export class AuthenticationService {
-  private host = 'http://localhost:8083';
+  private host = 'https://blad-e.herokuapp.com';
   private jwtToken: string;
   private roles: Array<any> = [];
   constructor(private http: HttpClient) {
@@ -57,18 +57,18 @@ export class AuthenticationService {
     return false;
   }
   public getUsers() {
-    return this.http.get('http://localhost:8081/eval');
+    return this.http.get('https://blad-e.herokuapp.com/eval');
   }
 
   public getUserByID(ideval) {
-    return this.http.get('http://localhost:8081/eval/' + ideval);
+    return this.http.get('https://blad-e.herokuapp.com/eval/' + ideval);
   }
 
   public deleteUser(ideval) {
-    return this.http.delete('http://localhost:8081/eval/' + ideval);
+    return this.http.delete('https://blad-e.herokuapp.com/eval/' + ideval);
   }
   public doRegistration(user: User): Observable<User> {
-    return this.http.post<User>('http://localhost:8082/eval', user);
+    return this.http.post<User>('https://blad-e.herokuapp.com/eval', user);
 
   }
 
