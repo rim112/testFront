@@ -10,7 +10,7 @@ import { Voyage } from 'src/app/Voyage';
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
-const apiURL = 'https://blad-e.herokuapp.com/Voyages';
+const apiURL = 'https://blad-e.herokuapp.com/voyages';
 
 @Injectable({
   providedIn: 'root'
@@ -28,11 +28,11 @@ export class VoyageService {
   }
 
   public getVoyagesList() {
-    return this.http.get('https://blad-e.herokuapp.com/Voyages');
+    return this.http.get('https://blad-e.herokuapp.com/voyages');
   }
 
   public getVoyage(id: number): Observable<Voyage> {
-    const url = 'https://blad-e.herokuapp.com/Voyages/' + id + '' ;
+    const url = 'https://blad-e.herokuapp.com/voyages/' + id + '' ;
     return this.http.get<Voyage>(url, httpOptions).pipe(
       tap(_ => console.log('fetched voyages id=${id}')),
       catchError(this.handleError<Voyage>('getVoyage id=${id}'))
@@ -40,15 +40,15 @@ export class VoyageService {
   }
 
   public createVoyage(voyage: Object) {
-    return this.http.post('https://blad-e.herokuapp.com/Voyages', voyage);
+    return this.http.post('https://blad-e.herokuapp.com/voyages', voyage);
   }
 
   public updateVoyage(id: number, value: any) {
-    return this.http.put('https://blad-e.herokuapp.com/Voyages' + id + '' , value);
+    return this.http.put('https://blad-e.herokuapp.com/voyages' + id + '' , value);
   }
 
   public deleteVoyage(id: number) {
-    return this.http.delete('https://blad-e.herokuapp.com/Voyages' + id + '' , { responseType: 'text' });
+    return this.http.delete('https://blad-e.herokuapp.com/voyages' + id + '' , { responseType: 'text' });
   }
 
 }

@@ -1,6 +1,6 @@
 
 <div *ngIf="authService.isUser();then contenu_bon else contenu_pas_bon">Le contenu saisi ici sera ignoré.</div>
-<ng-template #contenu_bon><app-voyage-list></app-voyage-list></ng-template>
+<ng-template #contenu_bon><app-search-delete></app-search-delete></ng-template>
 <ng-template #contenu_pas_bon>
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
     <div class="row">
@@ -23,6 +23,9 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" (click)="ongetfavoris()">Favoris</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="ongetevals()">Evaluations</a>
       </li>
     </ul>
     <ul class="form-inline mt-2 mt-md-0">
