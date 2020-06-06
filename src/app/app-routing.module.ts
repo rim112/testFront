@@ -18,6 +18,8 @@ import { BoListVoyagesComponent } from './bo-list-voyages/bo-list-voyages.compon
 import { BoCreatVoyageComponent } from './bo-creat-voyage/bo-creat-voyage.component';
 import { BoUpdateVoyageComponent } from './bo-update-voyage/bo-update-voyage.component';
 import { BoAccueilComponent } from './bo-accueil/bo-accueil.component';
+import { SearchDeleteComponent } from './search-delete/search-delete.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 const routes: Routes = [ { path: '', redirectTo: 'voyage', pathMatch: 'full' },
   { path: 'login', component: AuthentificationComponent },
