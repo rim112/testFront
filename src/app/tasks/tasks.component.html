@@ -16,7 +16,7 @@
         <a class="nav-link" (click)="ongetvoyageurs()">Voyageurs</a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" href="#"> Voyages</a>
+        <a class="nav-link" (click)="ongetvoyages()"> Voyages</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" (click)="ongetparticipation()">Participations</a>
@@ -39,7 +39,8 @@
   </nav>
   <br />
   <br />
-
+  <div *ngIf="mode==4" ><app-bo-accueil></app-bo-accueil></div>
+ 
   <div class="container">
 
     <table class="table table-striped" *ngIf="mode==2">
@@ -126,10 +127,10 @@
       </tbody>
 
 
-      
+
 
     </table>
-    </div>
+  </div>
 
 
 

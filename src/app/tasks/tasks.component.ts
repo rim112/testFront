@@ -37,6 +37,10 @@ export class TasksComponent implements OnInit {
       console.log(err);
     })
   }
+  ongetvoyages() {
+    this.mode = 4;
+    this.router.navigateByUrl('/tasks');
+  }
   ongetfavoris() {
     this.mode = 3;
     this.router.navigateByUrl('/tasks');

@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { User} from 'src/app/user';
-import { AuthenticationService } from 'src/services/authentication.service';
 import { HttpClient} from '@angular/common/http';
 import {FormBuilder} from '@angular/forms';
 import {Router} from '@angular/router';
-import {InteractionService} from '../../services/interaction.service';
-import {Voyage} from '../voyage';
+import { Voyage } from 'src/app/Voyage';
 import {SearchDeleteComponent} from  'src/app/search-delete/search-delete.component';
+import { InteractionService } from '../interaction.service';
+import { AuthenticationService } from '../authentication.service';
 
 @Component({
   selector: 'app-registration',
