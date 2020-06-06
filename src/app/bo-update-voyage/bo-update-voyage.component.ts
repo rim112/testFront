@@ -1,7 +1,7 @@
 import { VoyageService } from '../voyage.service';
 import { Component, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-
+import { Voyage } from 'src/app/Voyage';
 
 @Component({
   selector: 'app-bo-update-voyage',

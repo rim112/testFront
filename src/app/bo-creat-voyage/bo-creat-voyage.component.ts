@@ -1,7 +1,7 @@
 import { VoyageService } from '../voyage.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { Voyage } from 'src/app/Voyage';
 @Component({
   selector: 'app-bo-creat-voyage',
   templateUrl: './bo-creat-voyage.component.html',
