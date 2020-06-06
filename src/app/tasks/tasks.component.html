@@ -39,8 +39,8 @@
   </nav>
   <br />
   <br />
-  <div *ngIf="mode==4" ><app-bo-accueil></app-bo-accueil></div>
- 
+  <div *ngIf="mode==4"><app-bo-accueil></app-bo-accueil></div>
+
   <div class="container">
 
     <table class="table table-striped" *ngIf="mode==2">
@@ -67,6 +67,32 @@
             <input type="button" id="button1" value="Delete" routerLink="/adminparticipation" (click)="OnClick(v.idpff)" />
 
           </td>
+        </tr>
+      </tbody>
+
+
+    </table>
+  </div>
+  <div class="container">
+
+    <table class="table table-striped" *ngIf="mode==5">
+      <thead>
+        <tr>
+          <th>mail</th>
+          <th>destinationr</th>
+          <th>date d'évaluation</th>
+          <th>note</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr *ngFor="let v of user">
+          <td><font>{{v.username}}</font></td>
+          <td><font>{{v.destination}}</font></td>
+          <td><font>{{v.dateevaluation}}</font></td>
+          <td><font>{{v.note}}</font></td>
+          
         </tr>
       </tbody>
 

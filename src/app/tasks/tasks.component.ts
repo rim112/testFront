@@ -3,6 +3,7 @@ import { AuthServiceService } from '../auth-service.service';
 import { Router } from '@angular/router';
 import { ParticipationService } from '../participation.service';
 import { FavorisServiceService } from '../favoris-service.service';
+import { AuthenticationService } from '../authentication.service';
 
 @Component({
   selector: 'app-tasks',
@@ -15,9 +16,15 @@ export class TasksComponent implements OnInit {
   participations: any;
   favoris: any;
   tasks;
-  constructor(public authService: AuthServiceService, private router: Router, private favorisService: FavorisServiceService, private participationService: ParticipationService) { }
+  user: any;
+  constructor(public authService: AuthServiceService, private evalservice: AuthenticationService, private router: Router, private favorisService: FavorisServiceService, private participationService: ParticipationService) { }
 
   ngOnInit() {
+    this.evalservice.getUsers().subscribe(data => {
+      this.user = data;
+    }, err => {
+      console.log(err);
+    })
     this.authService.getVoyageurs()
     .subscribe(data => {
       this.voyageurs = data;
@@ -36,6 +43,10 @@ export class TasksComponent implements OnInit {
     }, err => {
       console.log(err);
     })
+  }
+  ongetevals() {
+    this.mode = 5;
+    this.router.navigateByUrl('/tasks');
   }
   ongetvoyages() {
     this.mode = 4;
