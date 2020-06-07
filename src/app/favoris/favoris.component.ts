@@ -28,7 +28,11 @@ export class FavorisComponent implements OnInit {
     })
   }
   title = 'Mes Favoris';
-
+  /*<td>
+        <button (click)="Onclick(todo.id_favoris)" style="background:green;color:#fff;">
+          delete
+        </button>
+      </td>*/
 
   Onclick(id: number) {
     this.favorisService.deleteFavoris(id).subscribe(data => {

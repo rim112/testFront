@@ -6,34 +6,47 @@
     <h1 >{{message}}</h1>
 </div>
 <div>
-<div>
+  <div class="panel panel-success" *ngIf="mode==1">
+    <div class="panel-heading">
+    </div>
+    <div class="panel-body">
+      <ul class="list-group">
+        <li class="list-group-item"> <strong>Merci pour votre vote</strong> </li>
+
+      </ul>
+      <button mat-raised-button color="warn" routerLink="/histo">Revenir à votre espace voyageur</button>
+    </div>
+  </div>
+  <div>
     <div class="row">
-        <div class="col-md-6">
-            <form>
-                <fieldset>
-                    <legend class="text-center">Evaluation<span class="req"><small>
-                                </small></span></legend>
+      <div class="col-md-6">
+        <form>
+          <fieldset>
+            <legend class="text-center">
 
-                    <div class="form-group">
-                        <label for="note"><span class="req">* </span> Note: <small>Veuillez noter le voyage globalement
-                                </small> </label>
-                        <input required type="number" [(value)]="user.note" name="note" id="note"
-                            class="form-control phone" maxlength="28" placeholder="Notez sur 10..." />
-                    </div>
+              Evaluation<span class="req">
+                <small>
+                </small>
+              </span>
+            </legend>
 
-
-
-
-
-                    <div class="form-group">
-                        <input class="btn btn-success" type="submit" name="submit_reg" value="Evaluer" (click)="registerNow()" >
-                    </div>
-                </fieldset>
-            </form><!-- ends register form -->
-            <!-- second for to fiter user-->
-        </div><!-- ends col-6 -->
+            <div class="form-group">
+              <label for="note">
+                <span class="req">* </span> Note: <small>
+                  Veuillez noter le voyage globalement
+                </small>
+              </label>
+              <input required type="number" [(value)]="user.note" name="note" id="note"
+                     class="form-control phone" maxlength="28" placeholder="Notez sur 10..." />
+            </div>
+              <input class="btn btn-success" type="submit" value="Evaluer" (click)="registerNow()">
+            
+          </fieldset>
+        </form><!-- ends register form -->
+        <!-- second for to fiter user-->
+      </div><!-- ends col-6 -->
 
     </div>
-</div>
+  </div>
 </div>
 </body>

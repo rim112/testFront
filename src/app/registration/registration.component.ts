@@ -21,8 +21,8 @@ export class RegistrationComponent implements OnInit {
   user: User = new User(0, '', '', 0, '');
   message: any;
   login: string;
-  mode; number = 0;
   destination: string;
+  mode: number = 0;
 
   ngOnInit() {
     this.interactionService.currentlogin$.subscribe(login => { this.login = login }
@@ -46,6 +46,9 @@ export class RegistrationComponent implements OnInit {
     this.user.username= this.login;
     this.user.dateevaluation = '2020-05-02';
     console.log(this.user);
-   this.service.doRegistration(this.user).subscribe((data) => this.user = data);
+  this.service.doRegistration(this.user).subscribe(data => {this.user = data; this.mode = 1;
+  }, err => {
+  console.log(err);
+      });
   }
 }
