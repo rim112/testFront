@@ -14,7 +14,7 @@
         <li class="list-group-item"> <strong>Merci pour votre vote</strong> </li>
 
       </ul>
-      <button mat-raised-button color="warn" routerLink="/histo">Revenir à votre espace voyageur</button>
+      <button mat-raised-button color="primary" routerLink="/histo">Revenir à votre espace voyageur</button>
     </div>
   </div>
   <div>
@@ -39,8 +39,9 @@
               <input required type="number" [(value)]="user.note" name="note" id="note"
                      class="form-control phone" maxlength="28" placeholder="Notez sur 10..." />
             </div>
-              <input class="btn btn-success" type="submit" value="Evaluer" (click)="registerNow()">
+            <input class="btn btn-success" type="button" id="button2" value="evaluer" (click)="registerNow()" />
             
+
           </fieldset>
         </form><!-- ends register form -->
         <!-- second for to fiter user-->
