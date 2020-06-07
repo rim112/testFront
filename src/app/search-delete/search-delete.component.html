@@ -56,7 +56,7 @@
             <td>{{histo.nom}}</td>
             <td>{{histo.destination}}</td>  
             <td>{{histo.dateParticipation}}</td>
-            <td class="text-center"><button class="btn" (click)="deleteVoyages(voyage.idpff)"><span class="glyphicon glyphicon-folder-close"></span></button><button type="button" class="btn btn-primary btn" (click)="onclicked(voyage.username,voyage.destination)" routerLink="/evaluation" >Evaluer</button></td>
+            <td class="text-center"><button class="btn" (click)="deleteVoyages(voyage.idpff)"><span class="glyphicon glyphicon-folder-close"></span></button><button type="button" class="btn btn-primary btn" (click)="onclicked(voyage.username,histo.destination)" routerLink="/evaluation" >Evaluer</button></td>
           </tr>
     </tbody>
     </table>
