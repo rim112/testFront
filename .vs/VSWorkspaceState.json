@@ -2,8 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\app"
+    "\\src\\app",
+    "\\src\\app\\registration",
+    "\\src\\app\\search-delete",
+    "\\src\\app\\voyage-list"
   ],
-  "SelectedNode": "\\src\\app\\registration",
+  "SelectedNode": "\\src\\test.ts",
   "PreviewInSolutionExplorer": false
 }

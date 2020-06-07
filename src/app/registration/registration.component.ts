@@ -41,7 +41,6 @@ export class RegistrationComponent implements OnInit {
 
   public registerNow() {
     console.log(this.login);
-    this.user.ideval= Math.round(Math.random()*100);
     this.user.destination = this.destination;
     this.user.username= this.login;
     this.user.dateevaluation = '2020-05-02';
