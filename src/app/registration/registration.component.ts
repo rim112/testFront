@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User} from 'src/app/user';
 import { HttpClient} from '@angular/common/http';
-import {FormBuilder} from '@angular/forms';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
 import { Voyage } from 'src/app/Voyage';
 import {SearchDeleteComponent} from  'src/app/search-delete/search-delete.component';
@@ -17,7 +17,7 @@ export class RegistrationComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder, private service: AuthenticationService, private router: Router, private interactionService: InteractionService) {}
 
-
+  evaluationForm: FormGroup;
   user: User = new User('', '', 0, '');
   message: any;
   login: string;
@@ -36,6 +36,11 @@ export class RegistrationComponent implements OnInit {
       , err => {
         console.log(err);
       });
+    this.evaluationForm = this.formBuilder.group({
+
+      note: [null, Validators.required]
+
+    });
 
   }
   
@@ -44,7 +49,7 @@ export class RegistrationComponent implements OnInit {
     console.log(this.login);
     this.user.destination = this.destination;
     this.user.username = this.login;
-    this.user.note = this.note;
+    this.user.note = this.evaluationForm.get('note').value;
     this.user.dateevaluation = '2020-05-02';
     console.log(this.user);
   this.service.doRegistration(this.user).subscribe(data => {this.user = data; this.mode = 1;
