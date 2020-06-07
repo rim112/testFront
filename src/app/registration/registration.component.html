@@ -1,11 +1,4 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<body>
-<div style="text-align: center">
-    <h1 >{{message}}</h1>
-</div>
-<div>
+
   <div class="panel panel-success" *ngIf="mode==1">
     <div class="panel-heading">
     </div>
@@ -17,37 +10,35 @@
       <button mat-raised-button color="primary" routerLink="/histo">Revenir à votre espace voyageur</button>
     </div>
   </div>
-  <div>
-    <div class="row">
-      <div class="col-md-6">
-        <form [formGroup]="evaluationForm">
-          <fieldset>
-            <legend class="text-center">
-
-              Evaluation<span class="req">
-                <small>
-                </small>
-              </span>
-            </legend>
-
-            <div class="form-group">
-              <label for="note">
-                <span class="req">* </span> Note: <small>
-                  Veuillez noter le voyage globalement
-                </small>
-              </label>
-              <input class="form-input" required type="number" formControlName="notee" name="note" id="note"
-                      maxlength="28" placeholder="Notez sur 10..." />
-            </div>
-            <input class="btn btn-success" type="button" id="button2" value="evaluer" (click)="registerNow()" />
-            
-
-          </fieldset>
-        </form><!-- ends register form -->
-        <!-- second for to fiter user-->
-      </div><!-- ends col-6 -->
-
+  <div class="example-container mat-elevation-z8">
+    <h2 class="headertekst">Evaluation</h2>
+    <div class="example-loading-shade"
+         *ngIf="isLoadingResults">
+      <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
     </div>
+
+    <mat-card class="example-card">
+      <form [formGroup]="evaluationForm">
+        <mat-form-field class="example-full-width">
+          <mat-label>nombre De Personnes</mat-label>
+          <input matInput type="number" placeholder="Notez sur 10..." class="form-input" formControlName="notee">
+          <mat-error>
+            <span *ngIf="!evaluationForm.get('notee').valid && evaluationForm.get('notee').touched">Veuillez entrer une note sur 10</span>
+          </mat-error>
+        </mat-form-field>
+
+
+        <div class="button-row">
+
+          <button class="btn btn-success" value="evaluer" (click)="registerNow()" [disabled]="!evaluationForm.valid" mat-flat-button color="primary" ><mat-icon>save</mat-icon></button>
+         
+        </div>
+ 
+      </form>
+    </mat-card>
   </div>
-</div>
-</body>
+
+
+
+
+
