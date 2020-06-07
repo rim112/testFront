@@ -22,6 +22,7 @@ export class RegistrationComponent implements OnInit {
   message: any;
   login: string;
   destination: string;
+  note: any;
   mode: number = 0;
 
   ngOnInit() {
@@ -42,7 +43,8 @@ export class RegistrationComponent implements OnInit {
   public registerNow() {
     console.log(this.login);
     this.user.destination = this.destination;
-    this.user.username= this.login;
+    this.user.username = this.login;
+    this.user.note = this.note;
     this.user.dateevaluation = '2020-05-02';
     console.log(this.user);
   this.service.doRegistration(this.user).subscribe(data => {this.user = data; this.mode = 1;
