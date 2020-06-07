@@ -18,7 +18,7 @@ export class RegistrationComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, private service: AuthenticationService, private router: Router, private interactionService: InteractionService) {}
 
   evaluationForm: FormGroup;
-  user: User = new User('', '', 0, '');
+  user: User = new User('', '', 0);
   message: any;
   login: string;
   destination: string;
