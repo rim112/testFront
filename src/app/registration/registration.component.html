@@ -1,5 +1,4 @@
-
-  <div class="panel panel-success" *ngIf="mode==1">
+<div class="panel panel-success" *ngIf="mode==1">
     <div class="panel-heading">
     </div>
     <div class="panel-body">
@@ -9,15 +8,15 @@
       </ul>
       <button mat-raised-button color="primary" routerLink="/histo">Revenir à votre espace voyageur</button>
     </div>
-  </div>
-  <div class="example-container mat-elevation-z8">
+</div>
+<div class="example-container mat-elevation-z8">
     <h2 class="headertekst">Evaluation</h2>
     
 
     <mat-card class="example-card">
       <form [formGroup]="evaluationForm">
         <mat-form-field class="example-full-width">
-          <mat-label>nombre De Personnes</mat-label>
+          <mat-label>Note</mat-label>
           <input matInput type="number" placeholder="Notez sur 10..." class="form-input" formControlName="notee">
           <mat-error>
             <span *ngIf="!evaluationForm.get('notee').valid && evaluationForm.get('notee').touched">Veuillez entrer une note sur 10</span>

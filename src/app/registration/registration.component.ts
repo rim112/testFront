@@ -22,7 +22,7 @@ export class RegistrationComponent implements OnInit {
   message: any;
   login: string;
   destination: string;
-  note: any;
+  notee: any;
   mode: number = 0;
 
   ngOnInit() {
@@ -38,7 +38,7 @@ export class RegistrationComponent implements OnInit {
       });
     this.evaluationForm = this.formBuilder.group({
 
-      note: [null, Validators.required]
+      notee: [null, Validators.required]
 
     });
 
