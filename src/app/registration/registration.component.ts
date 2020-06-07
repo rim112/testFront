@@ -49,7 +49,7 @@ export class RegistrationComponent implements OnInit {
     console.log(this.login);
     this.user.destination = this.destination;
     this.user.username = this.login;
-    this.user.note = this.evaluationForm.get('note').value;
+    this.user.note = this.evaluationForm.get('notee').value;
     this.user.dateevaluation = '2020-05-02';
     console.log(this.user);
   this.service.doRegistration(this.user).subscribe(data => {this.user = data; this.mode = 1;
