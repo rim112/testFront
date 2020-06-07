@@ -1,34 +1,5 @@
-html {
-  height: 100%;
-  background-image: url("insc.jpg");
-  background-size: 100%;
-  /* Full height */
-  height: 100%;
 
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-body {
-  background: url("insc.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-.container {
-  /* The image used */
-  background-image: url("insc.jpg");
 
-  /* Full height */
-  height: 100%;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 fieldset {
     border: thin solid #ccc; 
     border-radius: 4px;
@@ -51,3 +22,65 @@ span.req {
     font-size: 120%;
 }
 
+h2 {
+  font-family: "Arial Black";
+  font-size: larger;
+  color: white;
+  font-weight: bold;
+}
+
+  h2.headertekst {
+    text-align: center;
+  }
+
+html, body {
+  background: url(insc.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  background-attachment: fixed;
+}
+
+.example-container {
+  position: relative;
+  padding: 5px;
+}
+
+.mat-card {
+  background-color: white;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: middle;
+  color: white;
+}
+
+#farmer {
+  width: 77px;
+  height: 77px;
+}
+
+.example-form {
+  color: black;
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  color: black;
+  width: 100%;
+}
+
+  .example-full-width:nth-last-child(0) {
+    margin-bottom: 10px;
+  }
+
+.button-row {
+  margin: 10px 0;
+}
+
+mat-label {
+  color: black;
+}
