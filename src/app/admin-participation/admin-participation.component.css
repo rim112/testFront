@@ -14,6 +14,10 @@ html, body {
   padding: 0;
   background-attachment: fixed;
 }
+#espace {
+  width: 77px;
+  height: 77px;
+}
 
 #farmer {
   width: 77px;

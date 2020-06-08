@@ -59,6 +59,10 @@ html, body {
 mat-label {
   color: white;
 }
+#espace {
+  width: 77px;
+  height: 77px;
+}
 
 .site-footer {
   background-color: #26272b;

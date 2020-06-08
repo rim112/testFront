@@ -3,10 +3,11 @@
     "",
     "\\src",
     "\\src\\app",
+    "\\src\\app\\accueil",
     "\\src\\app\\registration",
-    "\\src\\app\\search-delete",
-    "\\src\\app\\voyage-list"
+    "\\src\\app\\tasks",
+    "\\src\\app\\user"
   ],
-  "SelectedNode": "\\src\\test.ts",
+  "SelectedNode": "\\src\\app\\auth-service.service.ts",
   "PreviewInSolutionExplorer": false
 }

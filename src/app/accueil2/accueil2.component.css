@@ -12,6 +12,10 @@ html, body {
 ul li button {
   font-size: 11px;
 }
+#espace {
+  width: 77px;
+  height: 77px;
+}
 
 li i {
   margin-right: 5px;
