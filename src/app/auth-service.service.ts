@@ -16,8 +16,7 @@ export class AuthServiceService {
     return this.http.post(this.host + '/login', user, { observe: 'response' });
   }
   register(user) {
-    return this.http.post(this.host + '/users', user,
-      { headers: new HttpHeaders({ 'Authorization': this.jwtToken }) });
+    return this.http.post(this.host + '/users', user);
   }
 
   saveToken(jwt: string) {
